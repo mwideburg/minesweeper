@@ -1,0 +1,112 @@
+body{
+    background-image: url("https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png");
+    /* background-image: url("https://i.imgur.com/mBOLoZc.gif?noredirect"); */
+    background-size: cover;
+    font-family: 'Play', sans-serif;
+}
+
+.title{
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.tile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(219, 219, 219);
+    border-top: rgb(233, 230, 230) 2px solid;
+    border-left: rgb(233, 230, 230) 2px solid;
+    border-right: grey 2px solid;
+    border-bottom: grey 2px solid;
+    border-style: inset 1px;
+    text-align: center;
+    transition: background .5s;
+}
+.tile[reveal="true"] {
+    border-top: gray 2px solid;
+    border-left: gray 2px solid;
+    border-right:  rgb(233, 230, 230) 2px solid;
+    border-bottom: rgb(233, 230, 230) 2px solid;
+    border-style: outset 1px;
+}
+
+
+.tile:hover:not([reveal="true"]) {
+    background-color: rgb(187, 187, 187);
+    border-top: rgb(211, 209, 209) 2px solid;
+    border-left:  rgb(211, 209, 209) 2px solid;
+    border-right: rgb(105, 105, 105) 2px solid;
+    border-bottom: rgb(105, 105, 105) 2px solid;
+}
+
+
+#modal {
+    display: none;
+}
+
+#modal.isOpen {
+    display: block;
+    opacity: 93%;
+}
+
+.modal-screen {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.6)
+}
+
+.modal-form {
+    position: absolute;
+    z-index: 3;
+    top: 20%;
+    left: 50%;
+    background-color: white;
+    border: solid black 1px;
+    border-radius: 5px;
+    width: 300px;
+    padding: 10px;
+    margin-left: -161px;
+}
+
+input{
+    background: white;
+    border-radius:15px;
+    border: gray solid 1px;
+    font-family:'Play', sans-serif;
+    width: 40px;
+    padding: 5px;
+    text-align: center;
+    border-top: rgb(233, 230, 230) 2px solid;
+    border-left: rgb(233, 230, 230) 2px solid;
+    border-right: grey 2px solid;
+    border-bottom: grey 2px solid;
+}
+
+button {
+    margin-left: 10px;
+    background: white;
+    border-radius: 15px;
+    padding: 5px;
+    font-family:'Play', sans-serif;
+    border-top: rgb(233, 230, 230) 2px solid;
+    border-left: rgb(233, 230, 230) 2px solid;
+    border-right: grey 2px solid;
+    border-bottom: grey 2px solid;
+    transition: background .5s;
+}
+
+button:hover{
+    background: lightgray;
+    cursor: pointer;
+}
